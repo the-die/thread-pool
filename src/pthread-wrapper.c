@@ -10,7 +10,7 @@ int pthread_create(pthread_t* restrict thread, const pthread_attr_t* restrict at
     static bool initialized = false;
     static pthread_attr_t new_attr;
 
-    printf("[debug] [%s%d]\n", __FILE_NAME__, __LINE__);
+    printf("[debug] [%s%d] %p, %p, %p, %p\n", __FILE_NAME__, __LINE__, thread, attr, start_routine, arg);
 
     (void)attr;
     if (!initialized)
